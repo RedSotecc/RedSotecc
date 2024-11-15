@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>RED SOTECC</title>
+</head>
+<body>
+    <div class="tarjeta">
+        <div class="menu">
+            <a href="#seccion1" onclick="mostrarSeccion('seccion1')">
+                <img src="iconos/office-building_4300058.png" alt="Empresa" class="icono">
+                <span class="titulo">Empresa</span>
+            </a>
+            <a href="#seccion2" onclick="mostrarSeccion('seccion2')">
+                <img src="iconos/product_15291397.png" alt="Productos" class="icono">
+                <span class="titulo">Ofertas</span>
+            </a>
+            <a href="#seccion3" onclick="mostrarSeccion('seccion3')">
+                <img src="iconos/Paginate-Filter-Mail--Streamline-Freehand.png" alt="Contacto" class="icono">
+                <span class="titulo">Contacto</span>
+            </a>
+     </div>
+
+        <!-- Sección Empresa -->
+        <div id="seccion1" class="contenido" style="display: block;">
+            <h1 class="empresa"></h1>
+            <div class="empresalog">
+                <img src="img/logo.png">
+                
+            </div>
+  
+        </div>
+
+        <!-- Sección Ofertas -->
+        <div id="seccion2" class="contenido" style="display: none;">
+            <div class="scrollable">
+                <a href="https://www.facebook.com/sotecc2019S"><img src="img/face.jpg"></a>
+            </div>
+        </div>
+
+        <!-- Sección Contacto -->
+         <div id="seccion3" class="contenido" style="display: none;">
+            <p class="ofertas">Contacto de empresa</p>
+            <ul class="contacto-lista">
+                <li class="contacto-item">
+                    <a href="https://www.facebook.com/sotecc2019" target="_blank">
+                        <img src="iconos/facebook.png" class="contacto-icono" >
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li class="contacto-item">
+                    <a href="" target="_blank">
+                     <img src="iconos/instagram.png" class="contacto-icono" >
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li class="contacto-item">
+                    <a href="https://api.whatsapp.com/send?phone=5545143549&text=Hola,deseo saber mas sobre su empresa!!" target="_blank">
+                        <img src="iconos/whatsapp.png" class="contacto-icono" >
+                        <span>Whatsapp</span>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="ofertas" id="telefono"><b>Teléfonos</b></p>
+            <ul class="contacto-lista">
+                <li class="contacto-item">
+                    <a href="" target="_blank">
+                        <h4>TELÉFONO FIJO: 7261104460</h4>
+                        
+                    </a>
+                </li>
+                <li class="contacto-item">
+                    <h4>NOS ENCONTRAMOS EN: <a href="https://www.google.com/maps/place/RED+SOTECC/@19.3089048,-100.1442883,45m/data=!3m1!1e3!4m14!1m7!3m6!1s0x85d29de052f317e5:0x5a0dbe2c1993c9d6!2sRED+SOTECC!8m2!3d19.3088729!4d-100.14413!16s%2Fg%2F11flc1_wvn!3m5!1s0x85d29de052f317e5:0x5a0dbe2c1993c9d6!8m2!3d19.3088729!4d-100.14413!16s%2Fg%2F11flc1_wvn?entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D"><h4>20 DE NOVIEMBRE 102 ESQUINA NICOLAS BRAVO DONATO GUERRA</h4></a></h4>
+                    </a>
+                </li>
+            </ul>
+         </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
