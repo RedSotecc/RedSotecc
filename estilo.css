@@ -178,6 +178,6 @@ h4 {
 
     .contenido {
         height: calc(550px - 60px);  /* Ajuste de altura de las secciones */
-         margin-top: 2%;
+         margin-top: 5%;
     }
 }
