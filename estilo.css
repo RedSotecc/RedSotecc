@@ -2,12 +2,12 @@
 body {
     font-family: Arial, sans-serif;
     background-color: gray;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    padding: 0;
-    margin: 0;
     overflow: hidden;
 }
 
@@ -17,11 +17,10 @@ form {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
-    height: 600px;  /* Altura predeterminada para el formulario */
+    height: 600px; /* Altura predeterminada para el formulario */
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin-top: 2%;
     position: fixed; /* Fijo en la pantalla */
     top: 50%; /* Centrado vertical */
     left: 50%; /* Centrado horizontal */
@@ -34,10 +33,10 @@ form {
     justify-content: space-around;
     width: 100%;
     background-color: #007BFF;
-    padding: 8px 0;  /* Menos espacio en los lados */
+    padding: 8px 0; /* Menos espacio en los lados */
     box-sizing: border-box;
     flex-shrink: 0;
-    height: 70px;  /* Altura más pequeña para el menú */
+    height: 70px; /* Altura más pequeña para el menú */
 }
 
 .menu a {
@@ -50,8 +49,8 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    min-height: 40px;  /* Enlaces más pequeños */
-    justify-content: center;  /* Centra los elementos verticalmente */
+    min-height: 40px; /* Enlaces más pequeños */
+    justify-content: center; /* Centra los elementos verticalmente */
 }
 
 .menu a:hover {
@@ -59,12 +58,12 @@ form {
 }
 
 .menu a .icono {
-    width: 28px;  /* Íconos más pequeños */
+    width: 28px; /* Íconos más pequeños */
     height: 28px;
 }
 
 .titulo {
-    font-size: 12px;  /* Título más pequeño */
+    font-size: 12px; /* Título más pequeño */
     line-height: 1.2;
     margin-top: 4px;
 }
@@ -77,7 +76,7 @@ form {
     flex-grow: 1;
     background-color: white;
     overflow-y: auto;
-    height: calc(600px - 60px);  /* Ajusta la altura para dejar espacio para el menú */
+    height: calc(600px - 60px); /* Ajusta la altura para dejar espacio para el menú */
 }
 
 #seccion2, #seccion3 {
@@ -105,7 +104,7 @@ form {
 }
 
 #seccion3 {
-    padding: 10px;  /* Menos espacio en el contenido */
+    padding: 10px; /* Menos espacio en el contenido */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -125,7 +124,7 @@ form {
 .contacto-item {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;  /* Menos margen entre los elementos */
+    margin-bottom: 8px; /* Menos margen entre los elementos */
 }
 
 .contacto-item a {
@@ -137,7 +136,7 @@ form {
 }
 
 .contacto-icono {
-    width: 30px;  /* Íconos más pequeños */
+    width: 30px; /* Íconos más pequeños */
     height: 30px;
     margin-right: 10px;
 }
