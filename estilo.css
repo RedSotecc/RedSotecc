@@ -33,7 +33,7 @@ form {
     padding: 8px 0;  /* Menos espacio en los lados */
     box-sizing: border-box;
     flex-shrink: 0;
-    height: 60px;  /* Altura más pequeña para el menú */
+    height: 70px;  /* Altura más pequeña para el menú */
 }
 
 .menu a {
@@ -46,7 +46,7 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    min-height: 40px;  /* Enlaces más pequeños */
+    min-height: 50px;  /* Menos espacio en los enlaces */
     justify-content: center;  /* Centra los elementos verticalmente */
 }
 
@@ -55,8 +55,8 @@ form {
 }
 
 .menu a .icono {
-    width: 28px;  /* Íconos más pequeños */
-    height: 28px;
+    width: 30px;  /* Íconos más pequeños */
+    height: 30px;
 }
 
 .titulo {
@@ -101,7 +101,7 @@ form {
 }
 
 #seccion3 {
-    padding: 10px;  /* Menos espacio en el contenido */
+    padding: 15px;  /* Menos espacio en el contenido */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -121,7 +121,7 @@ form {
 .contacto-item {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;  /* Menos margen entre los elementos */
+    margin-bottom: 10px;  /* Menos margen entre los elementos */
 }
 
 .contacto-item a {
@@ -133,8 +133,8 @@ form {
 }
 
 .contacto-icono {
-    width: 30px;  /* Íconos más pequeños */
-    height: 30px;
+    width: 35px;  /* Íconos más pequeños */
+    height: 35px;
     margin-right: 10px;
 }
 
@@ -146,12 +146,13 @@ h4 {
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 768px ) {
     .menu {
         flex-direction: row;
         justify-content: space-evenly;
         padding: 10px 0;
         height: 70px;  /* Menú más compacto */
+       
     }
 
     .menu a {
@@ -163,8 +164,8 @@ h4 {
     }
 
     .menu a .icono {
-        width: 24px;  /* Íconos aún más pequeños en móviles */
-        height: 24px;
+        width: 25px;  /* Íconos aún más pequeños en móviles */
+        height: 25px;
     }
 
     .titulo {
@@ -173,22 +174,13 @@ h4 {
     }
 
     form {
-        height: 600px;  /* Formulario más pequeño en móviles */
+        height: 500px;  /* Formulario más pequeño en móviles */
+        margin-top: 25%;
+        
     }
 
     .contenido {
         height: calc(550px - 60px);  /* Ajuste de altura de las secciones */
-        margin-top: 5%;
-    }
-
-    /* Ajustar tamaño de los íconos de contacto */
-    .contacto-icono {
-        width: 25px;
-        height: 25px;
-    }
-
-    /* Ajustar márgenes de las secciones para mejor visualización */
-    #seccion1, #seccion2, #seccion3 {
-        padding: 10px;
+       
     }
 }
