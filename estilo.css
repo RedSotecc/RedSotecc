@@ -29,6 +29,7 @@ p {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Impide que se desborde el contenido */
 }
 
 .menu {
@@ -38,6 +39,7 @@ p {
     background-color: #007BFF;
     padding: 15px 0;
     box-sizing: border-box;
+    flex-shrink: 0; /* No se reduce el tamaño del menú */
 }
 
 .menu a {
@@ -70,10 +72,10 @@ p {
     display: none;
     padding: 0;
     margin-top: 0;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
     flex-grow: 1;
+    overflow-y: auto;  /* Permite el desplazamiento */
     background-color: white;
+    flex-shrink: 1;
 }
 
 #seccion2, #seccion3 {
@@ -172,19 +174,33 @@ h4 {
         margin-left: 8px; /* Espaciado entre el icono y el texto */
     }
 
+    /* Asegura que el contenedor de contenido sea flexible */
     .contenido {
-        height: calc(100vh - 60px);  /* Asegura que las secciones tengan suficiente alto */
-        overflow-y: auto;  /* Permite el desplazamiento si el contenido es largo */
+        height: calc(100vh - 60px);  /* Se asegura de que la altura sea proporcional */
+        overflow-y: auto;  /* Permite que las secciones tengan scroll si es necesario */
+        display: flex;
+        flex-direction: column;  /* Las secciones se alinean correctamente */
     }
 
-    #seccion2, #seccion3, #seccion1 {
-        display: block; /* Se asegura que las secciones se muestren correctamente */
-        height: 100%;
+    /* Configura el comportamiento cuando se cambia de sección */
+    #seccion1, #seccion2, #seccion3 {
+        display: block;  /* Muestra todas las secciones */
+        height: auto;
     }
-}
 
-    .titulo {
-        font-size: 12px;  /* Tamaño del texto ajustado */
-        margin-left: 8px; /* Espaciado entre el icono y el texto */
+    /* Sección de la empresa (sección 1) */
+    #seccion1 {
+        background-color: rgb(253, 245, 245);
+    }
+
+    /* Sección de ofertas (sección 2) */
+    #seccion2 {
+        background-color: white;
+    }
+
+    /* Sección de contacto (sección 3) */
+    #seccion3 {
+        padding: 20px;
+        height: auto;  /* Asegura que no se corte el contenido */
     }
 }
