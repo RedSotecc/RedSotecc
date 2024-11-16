@@ -173,7 +173,7 @@ h4 {
     }
 
     form {
-        height: 450px;  /* Formulario más pequeño en móviles */
+        height: 500px;  /* Formulario más pequeño en móviles */
     }
 
     .contenido {
