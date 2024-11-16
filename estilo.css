@@ -146,7 +146,7 @@ h4 {
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .menu {
         flex-direction: row;
         justify-content: space-evenly;
@@ -173,7 +173,7 @@ h4 {
     }
 
    form {
-        height: 590px;  /* Formulario más pequeño en móviles */
+        height: 500px;  /* Formulario más pequeño en móviles */
     }
 
 
