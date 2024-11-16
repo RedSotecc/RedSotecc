@@ -174,10 +174,11 @@ h4 {
 
     form {
         height: 500px;  /* Formulario más pequeño en móviles */
+         margin-top: 5%;
     }
 
     .contenido {
         height: calc(550px - 60px);  /* Ajuste de altura de las secciones */
-         margin-top: 5%;
+        
     }
 }
