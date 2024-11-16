@@ -7,7 +7,17 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    overflow: hidden; /* Evita que haya scroll en el body */
+    overflow: hidden; 
+}
+
+p {
+    color: rgb(204, 54, 54);
+    font-size: 20px;
+}
+
+#telefono {
+    color: rgb(204, 54, 54);
+    font-size: 20px;
 }
 
 .tarjeta {
@@ -19,16 +29,16 @@ body {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Hace que las secciones vayan una debajo de la otra */
+    flex-direction: column;
 }
 
 .menu {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #007BFF; /* Barra de menú azul */
+    background-color: #007BFF; 
     padding: 10px 0;
-    box-sizing: border-box; /* Esto asegura que el padding no rompa el diseño */
+    box-sizing: border-box;
 }
 
 .menu a {
@@ -41,7 +51,8 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    min-height: 60px; /* Asegura que los íconos tengan un espacio suficiente */
+    min-height: 60px;
+    justify-content: center; /* Asegura que el icono esté centrado verticalmente */
 }
 
 .menu a:hover {
@@ -49,12 +60,12 @@ body {
 }
 
 .menu a .icono {
-    width: 40px;  /* Aumentar el tamaño de los iconos */
+    width: 40px;  
     height: 40px;
 }
 
 .titulo {
-    font-size: 14px;  /* Un tamaño de texto ligeramente mayor */
+    font-size: 14px;  
     line-height: 1.2;
     margin-top: 4px;
 }
@@ -63,7 +74,7 @@ body {
     display: none;
     padding: 0;
     margin-top: 0;
-    height: calc(100vh - 60px); /* Ajusta la altura de las secciones */
+    height: calc(100vh - 60px); 
     overflow-y: auto;
     flex-grow: 1;
     background-color: white;
@@ -74,7 +85,7 @@ body {
 }
 
 #seccion1 {
-    background-color: rgb(253, 245, 245);  /* Mantener el fondo gris claro para la sección 1 */
+    background-color: rgb(253, 245, 245);  
 }
 
 .empresalog, .scrollable {
@@ -138,33 +149,60 @@ h4 {
     padding-left: 0;
 }
 
-#telefono {
-    color: rgb(13, 13, 68);
-    margin-top: 20px;
-}
-
-/* Evitar que los iconos se corten en cualquier resolución */
 .menu a .icono {
-    width: 40px;  /* Aumentar el tamaño de los iconos para que no se corten */
+    width: 40px;  
     height: 40px;
 }
 
-/* Ajuste para el contenedor de los iconos */
 .menu a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70px; /* Añadir un mínimo para evitar que los íconos se vean comprimidos */
+    min-height: 70px;
 }
 
-/* Aseguramos que la sección 3 no se recorte y tenga suficiente espacio */
 #seccion3 {
-    flex-grow: 1; /* Se asegura de ocupar el espacio restante */
+    flex-grow: 1; 
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
-    overflow-y: auto;  /* Para que pueda hacer scroll si hay mucho contenido */
+    overflow-y: auto; 
+}
+
+/* Ajustes para pantallas más pequeñas (dispositivos móviles) */
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column; /* Muestra los elementos del menú de forma vertical */
+    }
+
+    .menu a {
+        min-height: 50px;  /* Asegura que los iconos no se compriman demasiado */
+        padding: 10px 0;  /* Proporciona espacio suficiente entre los elementos */
+    }
+
+    .menu a .icono {
+        width: 50px;  /* Aumenta el tamaño del icono */
+        height: 50px;
+    }
+
+    .titulo {
+        font-size: 12px; /* Reducir ligeramente el tamaño del texto */
+    }
+
+    #seccion3 {
+        padding: 15px; /* Ajusta el padding en dispositivos pequeños */
+    }
+
+    /* Asegurar que los iconos y el contenido se ajusten bien */
+    .contacto-item a {
+        align-items: center; /* Centra el contenido dentro del enlace */
+    }
+
+    .contacto-icono {
+        width: 40px; /* Mantener el tamaño adecuado en dispositivos pequeños */
+        height: 40px;
+    }
 }
