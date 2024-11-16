@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full screen */
+    height: 100vh; /* Pantalla completa */
     overflow: hidden; /* Evitamos que el contenido se desborde */
 }
 
@@ -165,10 +165,9 @@ h4 {
         width: 100%;  /* 100% de ancho disponible */
         max-width: 380px; /* Ancho máximo */
         height: 600px; /* Altura fija */
-        margin: 0 20px; /* Márgenes a la izquierda y derecha */
+        margin: 0 10px; /* Márgenes de 10px en ambos lados */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
-
