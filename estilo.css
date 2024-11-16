@@ -10,6 +10,11 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+#conempresa{
+    color: rgb(247, 84, 84);
+    font-size: 24px;
+    text-align: center;
+}
 
 form {
     background-color: white;
@@ -36,7 +41,7 @@ form {
     padding: 8px 0; /* Menos espacio en los lados */
     box-sizing: border-box;
     flex-shrink: 0;
-    height: 70px; /* Altura más pequeña para el menú */
+    height: 80px; /* Altura más pequeña para el menú */
 }
 
 .menu a {
@@ -125,6 +130,7 @@ form {
     display: flex;
     align-items: center;
     margin-bottom: 8px; /* Menos margen entre los elementos */
+    padding: 5%;
 }
 
 .contacto-item a {
@@ -133,12 +139,17 @@ form {
     text-decoration: none;
     color: rgb(13, 13, 68);
     width: 100%;
+  
 }
 
+/* Forzamos el mismo tamaño para todos los íconos en la lista de contacto */
 .contacto-icono {
-    width: 30px; /* Íconos más pequeños */
+    width: 30px;  /* Tamaño uniforme para todos los íconos */
     height: 30px;
-    margin-right: 10px;
+    max-width: 30px; /* Evita que los íconos se agranden */
+    max-height: 30px; /* Evita que los íconos se agranden */
+    object-fit: contain; /* Asegura que las imágenes se ajusten correctamente */
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
 }
 
 h4 {
@@ -208,4 +219,3 @@ h4 {
         padding: 10px;
     }
 }
-
