@@ -41,7 +41,7 @@ p {
     width: 100%;  /* El menú ocupa todo el ancho del div .tarjeta */
     box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
     flex-wrap: nowrap; /* Evita que los elementos se rompan a la siguiente fila */
-    position: sticky; /* Fija el menú en la parte superior */
+    position: fixed; /* Fija el menú en la parte superior */
     top: 0;  /* Lo coloca al principio de la tarjeta */
     z-index: 100; /* Asegura que el menú esté por encima de otros contenidos */
 }
@@ -163,7 +163,7 @@ h4 {
         width: 100%;  /* El menú ocupa todo el ancho del div .tarjeta */
         padding: 10px 0;
         box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
-        position: sticky;  /* Fija el menú al tope de la pantalla */
+        position: fixed;  /* Fija el menú al tope de la pantalla */
         top: 0;
         z-index: 100; /* Lo mantiene por encima del contenido */
     }
