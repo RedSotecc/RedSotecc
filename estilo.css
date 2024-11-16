@@ -34,10 +34,10 @@ p {
 
 .menu {
     display: flex;
-    justify-content: space-evenly;  /* Distribuye los iconos de manera uniforme */
-    align-items: center;  /* Alineación vertical centrada de los iconos */
+    justify-content: space-between; /* Asegura que los iconos no se amontonen */
+    align-items: center;
     background-color: #007BFF;
-    padding: 10px 0;
+    padding: 10px;
     width: 100%;  /* El menú ocupa todo el ancho del div .tarjeta */
     box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
     flex-wrap: nowrap; /* Evita que los elementos se rompan a la siguiente fila */
@@ -152,16 +152,14 @@ h4 {
     padding-left: 0;
 }
 
-/* NUEVO: Estilos para dispositivos móviles */
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .menu {
         flex-direction: row; /* Los iconos estarán en fila horizontal */
-        justify-content: space-around; /* Asegura un espaciado adecuado entre los iconos */
+        justify-content: space-evenly; /* Espacio uniforme entre los iconos */
+        width: 100%;  /* El menú ocupa todo el ancho del div .tarjeta */
         padding: 10px 0;
-        width: 90%; /* El menú ocupa el 90% del ancho de la tarjeta */
-        max-width: 400px; /* Limita el ancho máximo para que no ocupe toda la pantalla */
-        margin: 0 auto;  /* Centra el menú */
-        flex-wrap: nowrap; /* Evita que los elementos se desborden */
+        box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
     }
 
     .menu a {
