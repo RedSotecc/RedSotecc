@@ -24,22 +24,24 @@ p {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Controla el tamaño de la tarjeta */
-    max-width: 400px; /* Tamaño máximo de la tarjeta */
-    height: 100vh;
-    overflow: hidden;
+    width: 90%; /* El tamaño de la tarjeta */
+    max-width: 400px; /* Máximo tamaño de la tarjeta */
+    min-height: 100vh; /* Para que la tarjeta ocupe al menos toda la altura de la pantalla */
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .menu {
     display: flex;
-    justify-content: space-around; /* Espaciado uniforme entre los iconos */
-    align-items: center;
+    justify-content: space-around; /* Distribuye los iconos uniformemente */
     width: 100%;
     background-color: #007BFF;
     padding: 10px 0;
     box-sizing: border-box;
+    /* Ya no es fijo */
+    position: relative;
+    flex-shrink: 0; /* Evita que el menú se achique */
 }
 
 .menu a {
@@ -60,7 +62,7 @@ p {
 }
 
 .menu a .icono {
-    width: 35px;  /* Tamaño del icono ajustado */
+    width: 35px;  /* Ajusta el tamaño de los iconos */
     height: 35px;
 }
 
@@ -74,10 +76,10 @@ p {
     display: none;
     padding: 0;
     margin-top: 0;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
     flex-grow: 1;
     background-color: white;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Rellena el espacio debajo del menú */
 }
 
 #seccion2, #seccion3 {
@@ -149,52 +151,30 @@ h4 {
     padding-left: 0;
 }
 
-.menu a .icono {
-    width: 40px;
-    height: 40px;
-}
-
-.menu a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70px;
-}
-
-#seccion3 {
-    flex-grow: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100%;
-    overflow-y: auto;
-}
-
-/* NUEVO: Estilos para dispositivos móviles */
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .menu {
-        flex-direction: row; /* Alineación horizontal de los iconos */
-        justify-content: space-evenly; /* Espaciado uniforme entre los iconos */
+        flex-direction: row; /* Los iconos estarán en fila */
+        justify-content: space-evenly; /* Distribuye los iconos uniformemente */
         padding: 15px 0;
+        position: relative; /* Ya no es fijo */
     }
 
     .menu a {
         min-height: 50px;
         padding: 0;
-        flex-direction: row; /* Los iconos y textos estarán en fila */
+        flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
     .menu a .icono {
-        width: 30px;  /* Tamaño del icono reducido */
-        height: 30px; 
+        width: 30px;
+        height: 30px;
     }
 
     .titulo {
-        font-size: 12px;  /* Tamaño del texto ajustado */
-        margin-left: 8px; /* Espaciado entre el icono y el texto */
+        font-size: 12px;
+        margin-left: 8px;
     }
 }
