@@ -1,17 +1,16 @@
-
 /* Estilos globales */
 body {
     font-family: Arial, sans-serif;
     background-color: gray;
+    margin: 0; /* Eliminamos el margen por defecto */
+    padding: 0; /* Eliminamos el padding por defecto */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* La altura será siempre 100% de la ventana */
-    margin: 0; /* Eliminamos márgenes predeterminados */
-    overflow: hidden; /* Evitamos que se desborde contenido */
+    height: 100vh; /* Full screen */
+    overflow: hidden; /* Evitamos que el contenido se desborde */
 }
 
-/* Formulario */
 form {
     background-color: white;
     border-radius: 8px;
@@ -21,7 +20,10 @@ form {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin: 0; /* Eliminamos márgenes */
+    position: fixed; /* Fijo en la pantalla */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajusta para que quede perfectamente centrado */
 }
 
 /* Menú */
@@ -150,10 +152,11 @@ h4 {
     /* Cuerpo */
     body {
         display: flex;
-        justify-content: center;  /* Centrado horizontal */
-        align-items: center;      /* Centrado vertical */
-        height: 100vh;  /* Pantalla completa */
+        justify-content: center; /* Centrado horizontal */
+        align-items: center;     /* Centrado vertical */
+        height: 100vh; /* Pantalla completa */
         margin: 0;
+        padding: 0;
     }
 
     /* Formulario */
@@ -161,5 +164,8 @@ h4 {
         width: 400px;  /* Ancho fijo */
         height: 600px; /* Altura fija */
         margin: 0;     /* Sin márgenes */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
