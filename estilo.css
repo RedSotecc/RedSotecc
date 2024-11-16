@@ -34,7 +34,6 @@ form {
     box-sizing: border-box;
     flex-shrink: 0;
     height: 70px;  /* Altura más pequeña para el menú */
-      justify-content: center;
 }
 
 .menu a {
@@ -147,13 +146,12 @@ h4 {
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 768px ) {
+@media (max-width: 768px) {
     .menu {
         flex-direction: row;
         justify-content: space-evenly;
         padding: 10px 0;
         height: 70px;  /* Menú más compacto */
-       
     }
 
     .menu a {
@@ -161,7 +159,7 @@ h4 {
         padding: 0;
         flex-direction: row;
         justify-content: center;
-       
+        align-items: center;
     }
 
     .menu a .icono {
@@ -176,13 +174,11 @@ h4 {
 
     form {
         height: 500px;  /* Formulario más pequeño en móviles */
-        margin-top: 25%;
-        
     }
 
     .contenido {
         height: calc(550px - 60px);  /* Ajuste de altura de las secciones */
-       
+        margin-top: 5%;
     }
 }
 
