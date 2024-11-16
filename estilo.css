@@ -7,7 +7,7 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /* Evita el desplazamiento global de la página */
 }
 
 p {
@@ -29,15 +29,16 @@ p {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Impide que se desborde el contenido */
+    overflow: hidden; /* Impide que el contenido se desborde */
 }
 
 .menu {
     display: flex;
-    justify-content: space-evenly;  /* Iconos en fila */
+    justify-content: space-evenly;  /* Los iconos estarán en fila horizontal */
+    align-items: center;  /* Alineación vertical centrada de los iconos */
     width: 100%;
     background-color: #007BFF;
-    padding: 15px 0;
+    padding: 10px 0;
     box-sizing: border-box;
     flex-shrink: 0; /* No se reduce el tamaño del menú */
 }
@@ -48,10 +49,11 @@ p {
     text-align: center;
     transition: color 0.3s;
     display: flex;
-    flex-direction: row;  /* Los iconos y los textos estarán en fila */
+    flex-direction: row;  /* Iconos y títulos en fila */
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
+    min-height: 60px;
 }
 
 .menu a:hover {
@@ -59,7 +61,7 @@ p {
 }
 
 .menu a .icono {
-    width: 30px;
+    width: 30px; /* Tamaño del icono ajustado */
     height: 30px;
 }
 
@@ -73,7 +75,7 @@ p {
     padding: 0;
     margin-top: 0;
     flex-grow: 1;
-    overflow-y: auto;  /* Permite el desplazamiento */
+    overflow-y: auto;  /* Permite el desplazamiento si es necesario */
     background-color: white;
     flex-shrink: 1;
 }
@@ -151,56 +153,54 @@ h4 {
 /* NUEVO: Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .menu {
-        flex-direction: row; /* Alineación horizontal de los iconos */
-        justify-content: space-evenly; /* Espaciado uniforme entre los iconos */
-        padding: 15px 0;
+        flex-direction: row; /* Los iconos estarán en fila horizontal */
+        justify-content: space-evenly; /* Espaciado uniforme */
+        padding: 10px 0;
     }
 
     .menu a {
-        min-height: 50px;
+        min-height: 60px;
         padding: 0;
-        flex-direction: row; /* Los iconos y textos estarán en fila */
+        flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
     .menu a .icono {
-        width: 30px;  /* Tamaño del icono reducido */
+        width: 30px;  /* Tamaño reducido de los iconos */
         height: 30px;
     }
 
     .titulo {
-        font-size: 12px;  /* Tamaño del texto ajustado */
-        margin-left: 8px; /* Espaciado entre el icono y el texto */
+        font-size: 12px;  /* Reducido para mejor visibilidad */
+        margin-left: 8px;
     }
 
-    /* Asegura que el contenedor de contenido sea flexible */
     .contenido {
-        height: calc(100vh - 60px);  /* Se asegura de que la altura sea proporcional */
-        overflow-y: auto;  /* Permite que las secciones tengan scroll si es necesario */
+        height: calc(100vh - 60px); /* Asegura que las secciones ocupen el espacio restante */
+        overflow-y: auto;  /* Permite el scroll si es necesario */
         display: flex;
-        flex-direction: column;  /* Las secciones se alinean correctamente */
+        flex-direction: column;
     }
 
-    /* Configura el comportamiento cuando se cambia de sección */
-    #seccion1, #seccion2, #seccion3 {
-        display: block;  /* Muestra todas las secciones */
+    /* Sección 1 - Empresa */
+    #seccion1 {
+        background-color: rgb(253, 245, 245);
+        display: block;  /* Se asegura que esté visible */
         height: auto;
     }
 
-    /* Sección de la empresa (sección 1) */
-    #seccion1 {
-        background-color: rgb(253, 245, 245);
-    }
-
-    /* Sección de ofertas (sección 2) */
+    /* Sección 2 - Ofertas */
     #seccion2 {
         background-color: white;
+        display: block;
+        height: auto;
     }
 
-    /* Sección de contacto (sección 3) */
+    /* Sección 3 - Contacto */
     #seccion3 {
         padding: 20px;
-        height: auto;  /* Asegura que no se corte el contenido */
+        display: block; /* Asegura que se muestre correctamente */
+        height: auto;
     }
 }
