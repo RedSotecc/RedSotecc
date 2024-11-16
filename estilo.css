@@ -74,8 +74,8 @@ p {
 
 .contenido {
     display: none;
-    padding: 0;
-    margin-top: 60px; /* Deja espacio para los iconos del menú */
+    padding: 0;  /* Elimina cualquier padding innecesario */
+    margin-top: 0; /* Elimina el margen superior */
     flex-grow: 1;
     overflow-y: auto;  /* Permite el desplazamiento si es necesario */
     background-color: white;
@@ -87,6 +87,8 @@ p {
 
 #seccion1 {
     background-color: rgb(253, 245, 245);
+    margin-top: 0;  /* Elimina el margen superior en la sección 1 */
+    padding-top: 0; /* Elimina el relleno superior */
 }
 
 .empresalog, .scrollable {
@@ -157,11 +159,9 @@ h4 {
         flex-direction: row; /* Los iconos estarán en fila horizontal */
         justify-content: flex-start; /* Alineación de los iconos hacia la izquierda */
         padding: 10px 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        width: 100%; /* Asegura que el menú ocupe todo el ancho del div .tarjeta */
+        width: 100%; /* El menú ocupará todo el ancho de la tarjeta */
+        max-width: 400px;  /* Limita el ancho máximo para que no ocupe toda la pantalla */
+        margin: 0 auto;  /* Centra el menú */
         flex-wrap: nowrap; /* Evita que los elementos se desborden */
         overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es mayor que el ancho */
     }
@@ -196,6 +196,8 @@ h4 {
         background-color: rgb(253, 245, 245);
         display: block;  /* Se asegura que esté visible */
         height: auto;
+        margin-top: 0;  /* Elimina cualquier margen superior */
+        padding-top: 0; /* Elimina el relleno superior */
     }
 
     /* Sección 2 - Ofertas */
@@ -212,3 +214,4 @@ h4 {
         height: auto;
     }
 }
+
