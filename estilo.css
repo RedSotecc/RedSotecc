@@ -161,11 +161,12 @@ h4 {
 
     /* Formulario */
     form {
-        width: 400px;  /* Ancho fijo */
+        width: calc(100% - 40px); /* Ancho dinámico, con un margen de 20px por cada lado */
         height: 600px; /* Altura fija */
-        margin: 0;     /* Sin márgenes */
+        margin: 20px; /* Agregamos un margen de 20px a cada lado */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
+
