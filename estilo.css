@@ -39,6 +39,7 @@ p {
     background-color: #007BFF; 
     padding: 10px 0;
     box-sizing: border-box;
+    flex-wrap: nowrap; /* Impide que los elementos se apilen en pantallas pequeñas */
 }
 
 .menu a {
@@ -52,7 +53,7 @@ p {
     align-items: center;
     padding: 5px;
     min-height: 60px;
-    justify-content: center; /* Asegura que el icono esté centrado verticalmente */
+    justify-content: center; /* Asegura que los iconos estén centrados verticalmente */
 }
 
 .menu a:hover {
@@ -175,21 +176,23 @@ h4 {
 /* Ajustes para pantallas más pequeñas (dispositivos móviles) */
 @media (max-width: 480px) {
     .menu {
-        flex-direction: column; /* Muestra los elementos del menú de forma vertical */
+        flex-direction: row; /* Asegura que los iconos se mantengan en una fila */
+        flex-wrap: nowrap; /* Impide que los iconos se apilen */
+        justify-content: space-between; /* Proporciona espacio entre los iconos */
     }
 
     .menu a {
-        min-height: 50px;  /* Asegura que los iconos no se compriman demasiado */
-        padding: 10px 0;  /* Proporciona espacio suficiente entre los elementos */
+        min-height: 60px;  /* Mantiene la altura de los enlaces */
+        padding: 5px;  /* Asegura que los iconos tengan suficiente espacio */
     }
 
     .menu a .icono {
-        width: 50px;  /* Aumenta el tamaño del icono */
-        height: 50px;
+        width: 40px;  /* Mantén un tamaño adecuado para los iconos */
+        height: 40px;
     }
 
     .titulo {
-        font-size: 12px; /* Reducir ligeramente el tamaño del texto */
+        font-size: 12px; /* Reduce el tamaño de la fuente */
     }
 
     #seccion3 {
