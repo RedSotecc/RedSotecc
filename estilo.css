@@ -146,13 +146,13 @@ h4 {
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 768px ) {
     .menu {
         flex-direction: row;
         justify-content: space-evenly;
         padding: 10px 0;
         height: 70px;  /* Menú más compacto */
-        width: 100%;
+       
     }
 
     .menu a {
@@ -176,7 +176,7 @@ h4 {
     form {
         height: 500px;  /* Formulario más pequeño en móviles */
         margin-top: 25%;
-        align-items: center;
+        
     }
 
     .contenido {
@@ -184,3 +184,4 @@ h4 {
        
     }
 }
+
