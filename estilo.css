@@ -15,7 +15,8 @@ form {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Ancho fijo */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 400px; /* Ancho máximo */
     height: 600px; /* Altura fija */
     display: flex;
     flex-direction: column;
@@ -156,18 +157,19 @@ h4 {
         align-items: center;     /* Centrado vertical */
         height: 100vh; /* Pantalla completa */
         margin: 0;
-        padding: 0;
+        padding: 0 20px; /* Añadimos padding de 20px a los lados */
     }
 
     /* Formulario */
     form {
-        width: 100%;  /* 100% de ancho disponible, con márgenes laterales */
-        max-width: 380px; /* Establecemos un ancho máximo */
+        width: 100%;  /* 100% de ancho disponible */
+        max-width: 380px; /* Ancho máximo */
         height: 600px; /* Altura fija */
-        margin: 20px; /* Añadimos márgenes alrededor (20px a cada lado) */
+        margin: 0; /* Eliminamos el margen de formulario */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
+
 
