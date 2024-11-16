@@ -5,8 +5,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    padding: 0;
     margin: 0;
+    padding: 0;
     overflow: hidden; /* Evita el desplazamiento global de la página */
 }
 
@@ -30,17 +30,21 @@ p {
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Impide que el contenido se desborde */
+    margin-top: 60px; /* Espacio para que los iconos no se superpongan */
 }
 
 .menu {
     display: flex;
     justify-content: space-evenly;  /* Los iconos estarán en fila horizontal */
     align-items: center;  /* Alineación vertical centrada de los iconos */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: #007BFF;
     padding: 10px 0;
     box-sizing: border-box;
-    flex-shrink: 0; /* No se reduce el tamaño del menú */
+    z-index: 100; /* Asegura que los iconos estén siempre por encima del contenido */
 }
 
 .menu a {
@@ -49,7 +53,7 @@ p {
     text-align: center;
     transition: color 0.3s;
     display: flex;
-    flex-direction: row;  /* Iconos y títulos en fila */
+    flex-direction: column;  /* Iconos y títulos en columna */
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -73,11 +77,10 @@ p {
 .contenido {
     display: none;
     padding: 0;
-    margin-top: 0;
+    margin-top: 60px; /* Espacio para que el contenido no se solape con los iconos */
     flex-grow: 1;
     overflow-y: auto;  /* Permite el desplazamiento si es necesario */
     background-color: white;
-    flex-shrink: 1;
 }
 
 #seccion2, #seccion3 {
@@ -156,6 +159,10 @@ h4 {
         flex-direction: row; /* Los iconos estarán en fila horizontal */
         justify-content: space-evenly; /* Espaciado uniforme */
         padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
     }
 
     .menu a {
