@@ -157,7 +157,7 @@ h4 {
         align-items: center;     /* Centrado vertical */
         height: 100vh; /* Pantalla completa */
         margin: 0;
-        padding: 0 20px; /* Añadimos padding de 20px a los lados */
+        padding: 0; /* Eliminamos padding en el body */
     }
 
     /* Formulario */
@@ -165,11 +165,10 @@ h4 {
         width: 100%;  /* 100% de ancho disponible */
         max-width: 380px; /* Ancho máximo */
         height: 600px; /* Altura fija */
-        margin: 0; /* Eliminamos el margen de formulario */
+        margin: 0 20px; /* Márgenes a la izquierda y derecha */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
-
 
