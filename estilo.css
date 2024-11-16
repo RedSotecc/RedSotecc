@@ -174,7 +174,8 @@ h4 {
 
     form {
         height: 500px;  /* Formulario más pequeño en móviles */
-       justify-content: center;
+       margin-top: 25%;
+        padding:20%
     }
 
     .contenido {
