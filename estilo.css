@@ -38,10 +38,9 @@ p {
     align-items: center;  /* Alineación vertical centrada de los iconos */
     background-color: #007BFF;
     padding: 10px 0;
-    width: 100%;  /* El menú ocupa todo el ancho de la tarjeta */
+    width: 100%;  /* El menú ocupa todo el ancho del div .tarjeta */
     box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
     flex-wrap: nowrap; /* Evita que los elementos se rompan a la siguiente fila */
-    overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es mayor que el ancho */
 }
 
 .menu a {
@@ -157,13 +156,12 @@ h4 {
 @media (max-width: 768px) {
     .menu {
         flex-direction: row; /* Los iconos estarán en fila horizontal */
-        justify-content: flex-start; /* Alineación de los iconos hacia la izquierda */
+        justify-content: space-around; /* Asegura un espaciado adecuado entre los iconos */
         padding: 10px 0;
-        width: 90%; /* El menú ocupará el 90% del ancho de la tarjeta */
+        width: 90%; /* El menú ocupa el 90% del ancho de la tarjeta */
         max-width: 400px; /* Limita el ancho máximo para que no ocupe toda la pantalla */
         margin: 0 auto;  /* Centra el menú */
         flex-wrap: nowrap; /* Evita que los elementos se desborden */
-        overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es mayor que el ancho */
     }
 
     .menu a {
