@@ -34,6 +34,7 @@ form {
     box-sizing: border-box;
     flex-shrink: 0;
     height: 70px;  /* Altura más pequeña para el menú */
+      justify-content: center;
 }
 
 .menu a {
