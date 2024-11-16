@@ -3,7 +3,7 @@ body {
     background-color: gray;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea el contenido al principio */
+    align-items: flex-start;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -22,25 +22,13 @@ body {
     flex-direction: column; /* Hace que las secciones vayan una debajo de la otra */
 }
 
-.encabezado {
-    position: fixed;  /* Hace que el encabezado se quede fijo en la parte superior */
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #0056b3; /* Azul más oscuro para el encabezado */
-    padding: 8px 10px; /* Menú un poco más pequeño */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10; /* Asegura que el encabezado esté encima del contenido */
-}
-
 .menu {
     display: flex;
     justify-content: space-around;
     width: 100%;
     background-color: #007BFF; /* Barra de menú azul */
-    padding: 10px 0; /* Reduce el padding vertical para quitar espacio innecesario */
+    padding: 10px 0;
+    box-sizing: border-box; /* Esto asegura que el padding no rompa el diseño */
 }
 
 .menu a {
@@ -48,11 +36,12 @@ body {
     text-decoration: none;
     text-align: center;
     transition: color 0.3s;
-    flex: 1; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 5px; /* Añade un poco de espacio a los enlaces del menú */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    min-height: 60px; /* Asegura que los íconos tengan un espacio suficiente */
 }
 
 .menu a:hover {
@@ -60,28 +49,28 @@ body {
 }
 
 .menu a .icono {
-    width: 30px;  /* Aumentar el tamaño de los iconos */
-    height: 30px;
+    width: 40px;  /* Aumentar el tamaño de los iconos */
+    height: 40px;
 }
 
 .titulo {
-    font-size: 12px;  /* Mantener el tamaño del texto en el menú */
-    line-height: 1.2; 
+    font-size: 14px;  /* Un tamaño de texto ligeramente mayor */
+    line-height: 1.2;
     margin-top: 4px;
 }
 
 .contenido {
-    display: none; 
-    padding: 0;  /* Eliminar padding para eliminar espacio adicional */
-    margin-top: 0; /* Elimina el margen superior */
+    display: none;
+    padding: 0;
+    margin-top: 0;
     height: calc(100vh - 60px); /* Ajusta la altura de las secciones */
-    overflow-y: auto; 
-    flex-grow: 1; /* Permite que el contenido crezca y ocupe el espacio restante */
-    background-color: white;  /* Fondo blanco por defecto */
+    overflow-y: auto;
+    flex-grow: 1;
+    background-color: white;
 }
 
 #seccion2, #seccion3 {
-    background-color: white; /* Cambiar el fondo de las secciones 2 y 3 a blanco */
+    background-color: white;
 }
 
 #seccion1 {
@@ -93,38 +82,39 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%; /* Esto asegura que el contenedor ocupe el 100% de la altura */
+    height: 100%;
     margin: 0;
 }
 
 .imagen-seccion {
-    width: 100%;        /* Asegura que la imagen ocupe todo el ancho */
-    height: 100%;       /* Asegura que la imagen ocupe toda la altura */
-    object-fit: cover;  /* Mantiene la proporción y cubre el contenedor sin distorsionarse */
-    object-position: center; /* Asegura que la imagen esté centrada */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
+
 #seccion3 {
-    padding: 20px;  /* Mantener padding para separación de los elementos */
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinea el contenido al inicio (parte superior) */
-    align-items: flex-start; /* Alinea todo hacia la izquierda */
-    height: 100%; /* Asegura que la sección ocupe toda la altura disponible */
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
 }
 
 .contacto-lista {
-    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea los elementos de la lista a la izquierda */
+    align-items: flex-start;
     margin: 0;
     padding: 0;
 }
 
 .contacto-item {
     display: flex;
-    align-items: center; /* Centra verticalmente el icono con el texto */
-    margin-bottom: 15px; /* Separación entre los elementos de la lista */
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .contacto-item a {
@@ -132,31 +122,49 @@ body {
     align-items: center;
     text-decoration: none;
     color: rgb(13, 13, 68);
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    width: 100%;
 }
 
 .contacto-icono {
-    width: 40px; /* Tamaño de los iconos */
+    width: 40px;
     height: 40px;
-    margin-right: 10px; /* Separación entre icono y texto */
+    margin-right: 10px;
 }
 
 h4 {
     color: rgb(13, 13, 68);
-    text-align: left; /* Alinea el texto a la izquierda */
-    margin: 0; /* Elimina márgenes por defecto */
-    padding-left: 0; /* Elimina el espacio de padding a la izquierda */
+    text-align: left;
+    margin: 0;
+    padding-left: 0;
 }
 
 #telefono {
     color: rgb(13, 13, 68);
-    margin-top: 20px; /* Espacio extra para el bloque de teléfonos */
+    margin-top: 20px;
 }
 
-/* Estilo adicional para asegurarnos que el "20 de noviembre" esté pegado al borde izquierdo */
-.contacto-lista h4 {
-    padding-left: 0 !important; /* Elimina cualquier padding adicional */
-    margin-left: 0 !important;  /* Asegura que no haya margen a la izquierda */
+/* Evitar que los iconos se corten en cualquier resolución */
+.menu a .icono {
+    width: 40px;  /* Aumentar el tamaño de los iconos para que no se corten */
+    height: 40px;
 }
 
-   
+/* Ajuste para el contenedor de los iconos */
+.menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px; /* Añadir un mínimo para evitar que los íconos se vean comprimidos */
+}
+
+/* Aseguramos que la sección 3 no se recorte y tenga suficiente espacio */
+#seccion3 {
+    flex-grow: 1; /* Se asegura de ocupar el espacio restante */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    overflow-y: auto;  /* Para que pueda hacer scroll si hay mucho contenido */
+}
