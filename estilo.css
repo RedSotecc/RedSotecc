@@ -2,25 +2,26 @@
 body {
     font-family: Arial, sans-serif;
     background-color: gray;
-    margin: 0; /* Eliminamos el margen por defecto */
-    padding: 0; /* Eliminamos el padding por defecto */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh; /* Pantalla completa */
-    overflow: hidden; /* Evitamos que el contenido se desborde */
+    align-items: flex-start;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 form {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* 100% de ancho disponible */
-    max-width: 400px; /* Ancho máximo */
-    height: 600px; /* Altura fija */
+    width: 90%;
+    max-width: 400px;
+    height: 600px;  /* Altura predeterminada para el formulario */
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: 2%;
     position: fixed; /* Fijo en la pantalla */
     top: 50%; /* Centrado vertical */
     left: 50%; /* Centrado horizontal */
@@ -33,10 +34,10 @@ form {
     justify-content: space-around;
     width: 100%;
     background-color: #007BFF;
-    padding: 8px 0;
+    padding: 8px 0;  /* Menos espacio en los lados */
     box-sizing: border-box;
     flex-shrink: 0;
-    height: 70px;
+    height: 70px;  /* Altura más pequeña para el menú */
 }
 
 .menu a {
@@ -49,8 +50,8 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    min-height: 40px;
-    justify-content: center;
+    min-height: 40px;  /* Enlaces más pequeños */
+    justify-content: center;  /* Centra los elementos verticalmente */
 }
 
 .menu a:hover {
@@ -58,12 +59,12 @@ form {
 }
 
 .menu a .icono {
-    width: 28px;
+    width: 28px;  /* Íconos más pequeños */
     height: 28px;
 }
 
 .titulo {
-    font-size: 12px;
+    font-size: 12px;  /* Título más pequeño */
     line-height: 1.2;
     margin-top: 4px;
 }
@@ -76,7 +77,7 @@ form {
     flex-grow: 1;
     background-color: white;
     overflow-y: auto;
-    height: calc(600px - 70px);  /* Ajuste de altura para dejar espacio para el menú */
+    height: calc(600px - 60px);  /* Ajusta la altura para dejar espacio para el menú */
 }
 
 #seccion2, #seccion3 {
@@ -104,7 +105,7 @@ form {
 }
 
 #seccion3 {
-    padding: 10px;
+    padding: 10px;  /* Menos espacio en el contenido */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -124,7 +125,7 @@ form {
 .contacto-item {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 8px;  /* Menos margen entre los elementos */
 }
 
 .contacto-item a {
@@ -136,7 +137,7 @@ form {
 }
 
 .contacto-icono {
-    width: 30px;
+    width: 30px;  /* Íconos más pequeños */
     height: 30px;
     margin-right: 10px;
 }
@@ -150,17 +151,15 @@ h4 {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    /* Cuerpo */
     body {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        justify-content: center; /* Centrado horizontal */
+        align-items: center;     /* Centrado vertical */
+        height: 100vh; /* Pantalla completa */
         margin: 0;
         padding: 0; /* Eliminamos padding en el body */
     }
 
-    /* Formulario */
     form {
         width: calc(100% - 20px);  /* Calculamos el ancho dejando 10px de margen en ambos lados */
         max-width: 380px;  /* Máximo ancho */
@@ -169,6 +168,45 @@ h4 {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px 0;
+        height: 100px;  /* Menú más compacto */
+    }
+
+    .menu a {
+        min-height: 45px;  /* Enlaces más pequeños en móviles */
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu a .icono {
+        width: 24px;  /* Íconos aún más pequeños en móviles */
+        height: 24px;
+    }
+
+    .titulo {
+        font-size: 10px;  /* Título más pequeño */
+        margin-left: 6px;
+    }
+
+    .contenido {
+        height: calc(550px - 60px);  /* Ajuste de altura de las secciones */
+        margin-top: 5%;
+    }
+
+    .contacto-icono {
+        width: 25px;
+        height: 25px;
+    }
+
+    #seccion1, #seccion2, #seccion3 {
+        padding: 10px;
     }
 }
 
