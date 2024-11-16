@@ -24,9 +24,9 @@ p {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-    height: 100vh;
+    width: 90%; /* El ancho de la tarjeta */
+    max-width: 400px; /* Máximo de 400px */
+    height: 100vh; /* Altura completa de la pantalla */
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Impide que el contenido se desborde */
@@ -34,12 +34,12 @@ p {
 
 .menu {
     display: flex;
-    justify-content: space-evenly;  /* Los iconos estarán en fila horizontal */
+    justify-content: space-evenly;  /* Distribuye los iconos de manera uniforme */
     align-items: center;  /* Alineación vertical centrada de los iconos */
     background-color: #007BFF;
     padding: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
+    width: 100%;  /* El menú ocupa todo el ancho del div .tarjeta */
+    box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
 }
 
 .menu a {
@@ -48,11 +48,11 @@ p {
     text-align: center;
     transition: color 0.3s;
     display: flex;
-    flex-direction: column;  /* Iconos y títulos en columna */
+    flex-direction: column;  /* Los iconos y títulos están uno encima del otro */
     justify-content: center;
     align-items: center;
     padding: 5px;
-    min-height: 60px;
+    min-height: 60px; /* Asegura que cada icono tenga un tamaño adecuado */
 }
 
 .menu a:hover {
@@ -60,19 +60,19 @@ p {
 }
 
 .menu a .icono {
-    width: 30px; /* Tamaño del icono ajustado */
+    width: 30px; /* Tamaño reducido de los iconos */
     height: 30px;
 }
 
 .titulo {
-    font-size: 12px;
-    margin-left: 8px;
+    font-size: 12px; /* Tamaño más pequeño del texto */
+    margin-top: 4px;
 }
 
 .contenido {
     display: none;
     padding: 0;
-    margin-top: 60px; /* Espacio para que el contenido no se solape con los iconos */
+    margin-top: 60px; /* Deja espacio para los iconos del menú */
     flex-grow: 1;
     overflow-y: auto;  /* Permite el desplazamiento si es necesario */
     background-color: white;
@@ -152,21 +152,21 @@ h4 {
 @media (max-width: 768px) {
     .menu {
         flex-direction: row; /* Los iconos estarán en fila horizontal */
-        justify-content: space-evenly; /* Espaciado uniforme */
+        justify-content: space-evenly; /* Espaciado uniforme entre los iconos */
         padding: 10px 0;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 100;
-        width: 100%; /* Asegura que el menú ocupe todo el ancho del div */
+        width: 100%; /* Asegura que el menú ocupe todo el ancho del div .tarjeta */
     }
 
     .menu a {
+        flex-direction: row;  /* Los iconos y títulos están en fila horizontal */
         min-height: 60px;
-        padding: 0;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
+        padding: 0;
     }
 
     .menu a .icono {
@@ -180,7 +180,7 @@ h4 {
     }
 
     .contenido {
-        height: calc(100vh - 60px); /* Asegura que las secciones ocupen el espacio restante */
+        height: calc(100vh - 60px); /* Asegura que el contenido ocupe el espacio restante */
         overflow-y: auto;  /* Permite el scroll si es necesario */
         display: flex;
         flex-direction: column;
@@ -207,4 +207,3 @@ h4 {
         height: auto;
     }
 }
-
