@@ -166,6 +166,7 @@ h4 {
         position: fixed;  /* Fija el menú al tope de la pantalla */
         top: 0;
         z-index: 100; /* Lo mantiene por encima del contenido */
+        overflow: hidden;  /* Evita que los iconos se desborden */
     }
 
     .menu a {
@@ -174,11 +175,13 @@ h4 {
         justify-content: center;
         align-items: center;
         padding: 0;
+        white-space: nowrap;  /* Evita que el texto se rompa */
     }
 
     .menu a .icono {
         width: 30px;  /* Tamaño reducido de los iconos */
         height: 30px;
+        margin: 0 5px;  /* Espaciado entre iconos */
     }
 
     .titulo {
@@ -193,26 +196,11 @@ h4 {
         flex-direction: column;
     }
 
-    /* Sección 1 - Empresa */
-    #seccion1 {
-        background-color: rgb(253, 245, 245);
-        display: block;  /* Se asegura que esté visible */
-        height: auto;
-        margin-top: 0;  /* Elimina cualquier margen superior */
-        padding-top: 0; /* Elimina el relleno superior */
-    }
-
-    /* Sección 2 - Ofertas */
-    #seccion2 {
-        background-color: white;
-        display: block;
-        height: auto;
-    }
-
-    /* Sección 3 - Contacto */
-    #seccion3 {
-        padding: 20px;
-        display: block; /* Asegura que se muestre correctamente */
-        height: auto;
+    /* Ajuste del tamaño del div .tarjeta */
+    .tarjeta {
+        width: 95%; /* Reducimos el tamaño del div tarjeta */
+        max-width: 360px; /* Máximo de 360px */
+        height: auto; /* Altura ajustable */
+        margin-top: 60px; /* Dejamos un espacio para el menú fijo */
     }
 }
