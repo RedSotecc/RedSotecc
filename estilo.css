@@ -39,7 +39,7 @@ p {
     background-color: #007BFF; 
     padding: 10px 0;
     box-sizing: border-box;
-    flex-wrap: nowrap; /* Impide que los elementos se apilen en pantallas pequeñas */
+    flex-wrap: nowrap; /* Mantener los iconos en una sola fila sin que se rompan */
 }
 
 .menu a {
@@ -53,7 +53,7 @@ p {
     align-items: center;
     padding: 5px;
     min-height: 60px;
-    justify-content: center; /* Asegura que los iconos estén centrados verticalmente */
+    justify-content: center; /* Centra los iconos verticalmente */
 }
 
 .menu a:hover {
@@ -176,14 +176,15 @@ h4 {
 /* Ajustes para pantallas más pequeñas (dispositivos móviles) */
 @media (max-width: 480px) {
     .menu {
-        flex-direction: row; /* Asegura que los iconos se mantengan en una fila */
-        flex-wrap: nowrap; /* Impide que los iconos se apilen */
-        justify-content: space-between; /* Proporciona espacio entre los iconos */
+        flex-direction: row; /* Asegura que los iconos estén en una fila horizontal */
+        justify-content: space-between; /* Da espacio entre los iconos */
+        flex-wrap: nowrap; /* Evita que los iconos se apilen */
+        padding: 10px 5px; /* Ajusta el padding para que los iconos no se apilen */
     }
 
     .menu a {
-        min-height: 60px;  /* Mantiene la altura de los enlaces */
-        padding: 5px;  /* Asegura que los iconos tengan suficiente espacio */
+        min-height: 60px;  /* Mantiene la altura mínima de los enlaces */
+        padding: 0;  /* Reduce el espacio alrededor de los iconos */
     }
 
     .menu a .icono {
@@ -192,20 +193,20 @@ h4 {
     }
 
     .titulo {
-        font-size: 12px; /* Reduce el tamaño de la fuente */
+        font-size: 12px; /* Reduce el tamaño de la fuente para pantallas pequeñas */
     }
 
     #seccion3 {
-        padding: 15px; /* Ajusta el padding en dispositivos pequeños */
+        padding: 15px; /* Ajusta el padding de la sección de contacto */
     }
 
-    /* Asegurar que los iconos y el contenido se ajusten bien */
+    /* Ajustes en la lista de contactos */
     .contacto-item a {
         align-items: center; /* Centra el contenido dentro del enlace */
     }
 
     .contacto-icono {
-        width: 40px; /* Mantener el tamaño adecuado en dispositivos pequeños */
+        width: 40px; /* Mantén el tamaño adecuado para los iconos */
         height: 40px;
     }
 }
