@@ -1,29 +1,27 @@
+
+/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
     background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;  /* Evita el desbordamiento */
-    position: relative;
+    height: 100vh; /* La altura será siempre 100% de la ventana */
+    margin: 0; /* Eliminamos márgenes predeterminados */
+    overflow: hidden; /* Evitamos que se desborde contenido */
 }
 
+/* Formulario */
 form {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-    height: auto;  /* Ajusta la altura según el contenido */
-    min-height: 500px;  /* Altura mínima para el formulario */
+    width: 400px; /* Ancho fijo */
+    height: 600px; /* Altura fija */
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin: 0;
-    position: relative;  /* Evita desplazamientos */
+    margin: 0; /* Eliminamos márgenes */
 }
 
 /* Menú */
@@ -35,7 +33,7 @@ form {
     padding: 8px 0;
     box-sizing: border-box;
     flex-shrink: 0;
-    height: 70px;  /* Altura más pequeña para el menú */
+    height: 70px;
 }
 
 .menu a {
@@ -48,7 +46,7 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    min-height: 40px;  /* Enlaces más pequeños */
+    min-height: 40px;
     justify-content: center;
 }
 
@@ -149,54 +147,19 @@ h4 {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
+    /* Cuerpo */
     body {
-        justify-content: center;  /* Centrado de forma fija */
-        align-items: center;  /* Centrado vertical */
+        display: flex;
+        justify-content: center;  /* Centrado horizontal */
+        align-items: center;      /* Centrado vertical */
+        height: 100vh;  /* Pantalla completa */
+        margin: 0;
     }
 
-    .menu {
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 10px 0;
-        height: 100px;
-    }
-
-    .menu a {
-        min-height: 45px;
-        padding: 0;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menu a .icono {
-        width: 24px;
-        height: 24px;
-    }
-
-    .titulo {
-        font-size: 10px;
-        margin-left: 6px;
-    }
-
+    /* Formulario */
     form {
-        height: auto;
-        max-height: 80vh;  /* Limita la altura máxima del formulario */
-        width: 90%;  /* Ajusta el ancho del formulario */
-        margin-top: 0;
-    }
-
-    .contenido {
-        height: calc(550px - 70px);  /* Ajuste de altura de las secciones */
-        margin-top: 5%;
-    }
-
-    .contacto-icono {
-        width: 25px;
-        height: 25px;
-    }
-
-    #seccion1, #seccion2, #seccion3 {
-        padding: 10px;
+        width: 400px;  /* Ancho fijo */
+        height: 600px; /* Altura fija */
+        margin: 0;     /* Sin márgenes */
     }
 }
