@@ -11,24 +11,13 @@ body {
     overflow: hidden;
 }
 
-p {
-    color: rgb(204, 54, 54);
-    font-size: 20px;
-}
-
-#telefono {
-    color: rgb(204, 54, 54);
-    font-size: 20px;
-}
-
-/* Formulario */
 form {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
-    min-height: 100vh;
+    height: 100vh;  /* Fija el alto del formulario */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -43,7 +32,7 @@ form {
     padding: 10px 0;
     box-sizing: border-box;
     flex-shrink: 0;
-    height: 70px;  /* Definimos una altura fija para que no se desborde */
+    height: 70px;  /* Fija la altura del menú */
 }
 
 .menu a {
@@ -65,7 +54,7 @@ form {
 }
 
 .menu a .icono {
-    width: 35px;  /* Ajustamos el tamaño de los iconos */
+    width: 35px;  /* Tamaño fijo de los iconos */
     height: 35px;
 }
 
@@ -83,7 +72,7 @@ form {
     flex-grow: 1;
     background-color: white;
     overflow-y: auto;
-    height: calc(100vh - 70px);  /* Ajustamos el alto para dejar espacio para el menú */
+    height: calc(100vh - 70px);  /* Ajusta el alto para dejar espacio para el menú */
 }
 
 #seccion2, #seccion3 {
@@ -161,7 +150,7 @@ h4 {
         flex-direction: row;
         justify-content: space-evenly;
         padding: 15px 0;
-        height: 70px;  /* Mantiene la altura fija en móviles */
+        height: 70px;
     }
 
     .menu a {
@@ -182,4 +171,3 @@ h4 {
         margin-left: 8px;
     }
 }
-
