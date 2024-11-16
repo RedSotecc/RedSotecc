@@ -3,10 +3,11 @@ body {
     background-color: gray;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinea el contenido al principio */
     height: 100vh;
     padding: 0;
     margin: 0;
+    overflow: hidden; /* Evita que haya scroll en el body */
 }
 
 .tarjeta {
@@ -14,19 +15,34 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 90%; 
-    max-width: 400px; 
-    height: 90%;
-    overflow: hidden; 
+    max-width: 400px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Hace que las secciones vayan una debajo de la otra */
+}
+
+.encabezado {
+    position: fixed;  /* Hace que el encabezado se quede fijo en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0056b3; /* Azul más oscuro para el encabezado */
+    padding: 8px 10px; /* Menú un poco más pequeño */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* Asegura que el encabezado esté encima del contenido */
 }
 
 .menu {
     display: flex;
-    justify-content: space-around; 
-    background-color: #007BFF;
-    padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #007BFF; /* Barra de menú azul */
+    padding: 10px 0; /* Reduce el padding vertical para quitar espacio innecesario */
 }
+
 .menu a {
     color: black;
     text-decoration: none;
@@ -36,126 +52,111 @@ body {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
+    padding: 5px; /* Añade un poco de espacio a los enlaces del menú */
 }
+
 .menu a:hover {
     color: white;
 }
 
 .menu a .icono {
-    width: 24px; 
-    height: 24px;
+    width: 30px;  /* Aumentar el tamaño de los iconos */
+    height: 30px;
 }
+
 .titulo {
-    font-size: 12px; 
+    font-size: 12px;  /* Mantener el tamaño del texto en el menú */
     line-height: 1.2; 
     margin-top: 4px;
 }
 
 .contenido {
     display: none; 
-    padding: 10px; 
-    height: calc(100% - 60px); 
+    padding: 0;  /* Eliminar padding para eliminar espacio adicional */
+    margin-top: 0; /* Elimina el margen superior */
+    height: calc(100vh - 60px); /* Ajusta la altura de las secciones */
     overflow-y: auto; 
+    flex-grow: 1; /* Permite que el contenido crezca y ocupe el espacio restante */
+    background-color: white;  /* Fondo blanco por defecto */
+}
+
+#seccion2, #seccion3 {
+    background-color: white; /* Cambiar el fondo de las secciones 2 y 3 a blanco */
 }
 
 #seccion1 {
-    display: block; 
+    background-color: rgb(253, 245, 245);  /* Mantener el fondo gris claro para la sección 1 */
 }
 
-.empresalog {
+.empresalog, .scrollable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto; 
-}
-
-.catalogo {
-    list-style-type: none;
-    padding: 0;
+    height: 100%; /* Esto asegura que el contenedor ocupe el 100% de la altura */
     margin: 0;
 }
 
-.item {
-    text-align: center;
-    margin: 10px 0;
+.imagen-seccion {
+    width: 100%;        /* Asegura que la imagen ocupe todo el ancho */
+    height: 100%;       /* Asegura que la imagen ocupe toda la altura */
+    object-fit: cover;  /* Mantiene la proporción y cubre el contenedor sin distorsionarse */
+    object-position: center; /* Asegura que la imagen esté centrada */
 }
-
-.item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+#seccion3 {
+    padding: 20px;  /* Mantener padding para separación de los elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido al inicio (parte superior) */
+    align-items: flex-start; /* Alinea todo hacia la izquierda */
+    height: 100%; /* Asegura que la sección ocupe toda la altura disponible */
 }
 
 .contacto-lista {
-    list-style-type: none;
-    padding: 5px;
-    margin: 5px;
-    
+    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos de la lista a la izquierda */
+    margin: 0;
+    padding: 0;
 }
 
 .contacto-item {
-    margin: 10px 0;
+    display: flex;
+    align-items: center; /* Centra verticalmente el icono con el texto */
+    margin-bottom: 15px; /* Separación entre los elementos de la lista */
 }
 
 .contacto-item a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: rgb(13, 13, 68);
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
 .contacto-icono {
-    width: 40px;
+    width: 40px; /* Tamaño de los iconos */
     height: 40px;
-    margin-right: 10px;
+    margin-right: 10px; /* Separación entre icono y texto */
 }
 
-.ofertas {
-    padding: 10px;
-    color: red;
-    font-size: 20px;
-}
-
-@media (max-width: 600px) {
-    .tarjeta {
-        height: auto; 
-    }
-    .contenido {
-        height: auto; 
-    }
-    .scrollable {
-        max-height: 200px; 
-        overflow-y: auto; 
-    }
-}
-.empresalog {
-    width: 100%;
-    height: 70%;
-    margin-left: 18%;
-    margin-top: 20%;
-    border-radius: 15%;
- 
-}
-.empresalog img{
-    
-    border-radius: 15%;
-}
-#seccion1{
-  
-    background-color: rgb(253, 245, 245);
-}
-h4{
+h4 {
     color: rgb(13, 13, 68);
-    text-align: left;
-    
-}
-#telefono{
-    color: rgb(13, 13, 68);
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding-left: 0; /* Elimina el espacio de padding a la izquierda */
 }
 
-a{
+#telefono {
     color: rgb(13, 13, 68);
-    text-align: left;
-    
+    margin-top: 20px; /* Espacio extra para el bloque de teléfonos */
 }
 
+/* Estilo adicional para asegurarnos que el "20 de noviembre" esté pegado al borde izquierdo */
+.contacto-lista h4 {
+    padding-left: 0 !important; /* Elimina cualquier padding adicional */
+    margin-left: 0 !important;  /* Asegura que no haya margen a la izquierda */
+}
+
+   
