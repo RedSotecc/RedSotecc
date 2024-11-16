@@ -40,6 +40,8 @@ p {
     padding: 10px 0;
     width: 100%;  /* El menú ocupa todo el ancho del div .tarjeta */
     box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
+    flex-wrap: nowrap; /* Evita que los elementos se rompan a la siguiente fila */
+    overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es mayor que el ancho */
 }
 
 .menu a {
@@ -53,6 +55,7 @@ p {
     align-items: center;
     padding: 5px;
     min-height: 60px; /* Asegura que cada icono tenga un tamaño adecuado */
+    white-space: nowrap; /* Impide que el texto del título se rompa */
 }
 
 .menu a:hover {
@@ -152,17 +155,19 @@ h4 {
 @media (max-width: 768px) {
     .menu {
         flex-direction: row; /* Los iconos estarán en fila horizontal */
-        justify-content: space-evenly; /* Espaciado uniforme entre los iconos */
+        justify-content: flex-start; /* Alineación de los iconos hacia la izquierda */
         padding: 10px 0;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 100;
         width: 100%; /* Asegura que el menú ocupe todo el ancho del div .tarjeta */
+        flex-wrap: nowrap; /* Evita que los elementos se desborden */
+        overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es mayor que el ancho */
     }
 
     .menu a {
-        flex-direction: row;  /* Los iconos y títulos están en fila horizontal */
+        flex-direction: row;  /* Los iconos y títulos estarán en fila horizontal */
         min-height: 60px;
         justify-content: center;
         align-items: center;
