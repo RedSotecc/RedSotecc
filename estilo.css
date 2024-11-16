@@ -17,10 +17,11 @@ form {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
-    height: 100vh;  /* Fija el alto del formulario */
+    height: 600px;  /* Altura más pequeña para el formulario */
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: 2%;
 }
 
 /* Menú */
@@ -29,10 +30,10 @@ form {
     justify-content: space-around;
     width: 100%;
     background-color: #007BFF;
-    padding: 10px 0;
+    padding: 8px 0;  /* Menos espacio en los lados */
     box-sizing: border-box;
     flex-shrink: 0;
-    height: 70px;  /* Fija la altura del menú */
+    height: 70px;  /* Altura más pequeña para el menú */
 }
 
 .menu a {
@@ -45,7 +46,7 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    min-height: 60px;
+    min-height: 50px;  /* Menos espacio en los enlaces */
     justify-content: center;  /* Centra los elementos verticalmente */
 }
 
@@ -54,12 +55,12 @@ form {
 }
 
 .menu a .icono {
-    width: 35px;  /* Tamaño fijo de los iconos */
-    height: 35px;
+    width: 30px;  /* Íconos más pequeños */
+    height: 30px;
 }
 
 .titulo {
-    font-size: 14px;
+    font-size: 12px;  /* Título más pequeño */
     line-height: 1.2;
     margin-top: 4px;
 }
@@ -72,7 +73,7 @@ form {
     flex-grow: 1;
     background-color: white;
     overflow-y: auto;
-    height: calc(100vh - 70px);  /* Ajusta el alto para dejar espacio para el menú */
+    height: calc(600px - 60px);  /* Ajusta la altura para dejar espacio para el menú */
 }
 
 #seccion2, #seccion3 {
@@ -100,7 +101,7 @@ form {
 }
 
 #seccion3 {
-    padding: 20px;
+    padding: 15px;  /* Menos espacio en el contenido */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -120,7 +121,7 @@ form {
 .contacto-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;  /* Menos margen entre los elementos */
 }
 
 .contacto-item a {
@@ -132,8 +133,8 @@ form {
 }
 
 .contacto-icono {
-    width: 40px;
-    height: 40px;
+    width: 35px;  /* Íconos más pequeños */
+    height: 35px;
     margin-right: 10px;
 }
 
@@ -149,12 +150,12 @@ h4 {
     .menu {
         flex-direction: row;
         justify-content: space-evenly;
-        padding: 15px 0;
-        height: 70px;
+        padding: 10px 0;
+        height: 60px;  /* Menú más compacto */
     }
 
     .menu a {
-        min-height: 50px;
+        min-height: 45px;  /* Enlaces más pequeños en móviles */
         padding: 0;
         flex-direction: row;
         justify-content: center;
@@ -162,13 +163,20 @@ h4 {
     }
 
     .menu a .icono {
-        width: 30px;
-        height: 30px;
+        width: 25px;  /* Íconos aún más pequeños en móviles */
+        height: 25px;
     }
 
     .titulo {
-        font-size: 12px;
-        margin-left: 8px;
+        font-size: 10px;  /* Título más pequeño */
+        margin-left: 6px;
+    }
+
+    form {
+        height: 550px;  /* Formulario más pequeño en móviles */
+    }
+
+    .contenido {
+        height: calc(550px - 60px);  /* Ajuste de altura de las secciones */
     }
 }
-
