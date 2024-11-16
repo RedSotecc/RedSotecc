@@ -151,7 +151,7 @@ h4 {
         flex-direction: row;
         justify-content: space-evenly;
         padding: 10px 0;
-        height: 60px;  /* Menú más compacto */
+        height: 70px;  /* Menú más compacto */
     }
 
     .menu a {
@@ -173,7 +173,7 @@ h4 {
     }
 
     form {
-        height: 550px;  /* Formulario más pequeño en móviles */
+        height: 450px;  /* Formulario más pequeño en móviles */
     }
 
     .contenido {
